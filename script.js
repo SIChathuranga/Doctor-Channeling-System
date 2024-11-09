@@ -9,15 +9,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Form submission handling
+    // Form submission handling for contact form
     const contactForm = document.querySelector('#contact form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Here you would typically send the form data to a server
-            // For this example, we'll just show an alert
-            alert('Thank you for your message. We will get back to you soon!');
-            this.reset();
+            // Form submission is handled by PHP, so we don't need to prevent default here
+            // You can add client-side validation here if needed
         });
     }
 });
