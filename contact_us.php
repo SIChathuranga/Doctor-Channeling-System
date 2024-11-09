@@ -18,11 +18,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-header("Location: contact_us.php"); // Redirect back to the contact page
+header("Location: dashboard.php"); // Redirect back to the contact page
 exit();
 ?>
 
-<!-- Frontend form -->
+<!-- Frontend form
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,14 +33,14 @@ exit();
 <body>
     <h2>Contact Us</h2>
     <?php
-    if (isset($_SESSION['contact_success'])) {
-        echo "<p>{$_SESSION['contact_success']}</p>";
-        unset($_SESSION['contact_success']);
-    }
-    if (isset($_SESSION['contact_error'])) {
-        echo "<p>{$_SESSION['contact_error']}</p>";
-        unset($_SESSION['contact_error']);
-    }
+    // if (isset($_SESSION['contact_success'])) {
+    //     echo "<p>{$_SESSION['contact_success']}</p>";
+    //     unset($_SESSION['contact_success']);
+    // }
+    // if (isset($_SESSION['contact_error'])) {
+    //     echo "<p>{$_SESSION['contact_error']}</p>";
+    //     unset($_SESSION['contact_error']);
+    // }
     ?>
     <form method="POST" action="contact_us.php">
         <label for="name">Name:</label>
@@ -54,5 +54,5 @@ exit();
 
         <button type="submit">Send Message</button>
     </form>
-</body>
-</html>
+</body> -->
+<!-- </html> -->

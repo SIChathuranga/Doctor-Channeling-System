@@ -102,12 +102,25 @@ session_start();
         </div>
     </section>
 
-    <section id="contact" class="py-5">
+    
+
+    <?php
+    if (isset($_SESSION['contact_success'])) {
+        echo "<p>{$_SESSION['contact_success']}</p>";
+        unset($_SESSION['contact_success']);
+    }
+    if (isset($_SESSION['contact_error'])) {
+        echo "<p>{$_SESSION['contact_error']}</p>";
+        unset($_SESSION['contact_error']);
+    }
+    ?>
+
+<section id="contact" class="py-5">
         <div class="container">
             <h2 class="text-center mb-4">Contact Us</h2>
             <div class="row">
                 <div class="col-md-6 mx-auto">
-                    <form action="process_contact.php" method="POST">
+                    <form action="contact_us.php" method="POST">
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
                             <input type="text" class="form-control" id="name" name="name" required>
@@ -126,6 +139,19 @@ session_start();
             </div>
         </div>
     </section>
+
+    <!-- <form method="POST" action="contact_us.php">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form> -->
 
     <footer class="text-center py-3 bg-dark text-white">
         <p>&copy; 2024 DocChannel. All Rights Reserved.</p>
