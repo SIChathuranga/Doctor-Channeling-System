@@ -2,7 +2,7 @@
 
 A modern, full-stack healthcare appointment booking system built with React.js, Node.js/Express, and Firebase.
 
-![Doctor Channeling System](https://via.placeholder.com/1200x600?text=Doctor+Channeling+System)
+![Doctor Channeling System](https://th.bing.com/th/id/R.6bf0a6b6a524147ed4644a854992ed39?rik=UpoTN5c6l3P3FQ&riu=http%3a%2f%2fwww.sheelahospital.in%2fwp-content%2fuploads%2ffly-images%2f546%2fmedecinegeneral2016.jpg-848x518-c.jpg&ehk=kJLXOxp1ChkH004nyb3%2fJxhlbLyMReBfv5hVFmCFLB8%3d&risl=&pid=ImgRaw&r=0)
 
 ## ✨ Features
 
