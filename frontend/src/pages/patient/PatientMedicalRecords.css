@@ -1,0 +1,102 @@
+.medical-records-page {
+    animation: fadeIn 0.4s ease-out;
+}
+
+.tabs {
+    display: flex;
+    gap: var(--space-2);
+    margin-bottom: var(--space-6);
+    background: white;
+    padding: var(--space-2);
+    border-radius: var(--radius-xl);
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-5);
+    border: none;
+    background: transparent;
+    border-radius: var(--radius-lg);
+    font-weight: 500;
+    color: var(--neutral-600);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.tab:hover {
+    background: var(--neutral-100);
+}
+
+.tab.active {
+    background: var(--primary-500);
+    color: white;
+}
+
+.records-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.record-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-5);
+    background: white;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+}
+
+.record-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--primary-100);
+    color: var(--primary-600);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-2xl);
+}
+
+.record-info {
+    flex: 1;
+}
+
+.record-info h4 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-2);
+}
+
+.record-info p {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--neutral-600);
+    margin-bottom: var(--space-1);
+}
+
+.record-actions {
+    display: flex;
+    gap: var(--space-2);
+}
+
+@media (max-width: 768px) {
+    .record-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .record-actions {
+        width: 100%;
+    }
+
+    .record-actions .btn {
+        flex: 1;
+        justify-content: center;
+    }
+}
