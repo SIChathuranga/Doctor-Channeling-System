@@ -289,19 +289,75 @@ The project uses a custom CSS design system with:
 
 ## 📦 Deployment
 
-### Frontend (Vercel/Netlify)
+This project is configured for easy deployment on modern cloud platforms.
+
+### Quick Deployment
+
+- **Frontend**: Deploy on [Vercel](https://vercel.com) ✅
+- **Backend**: Deploy on [Render](https://render.com) ✅
+- **Database**: Firebase Firestore ✅
+
+### Deployment Guides
+
+📖 **[Complete Deployment Guide](./DEPLOYMENT.md)** - Comprehensive step-by-step instructions
+
+✅ **[Deployment Checklist](./DEPLOYMENT_CHECKLIST.md)** - Track your deployment progress
+
+### Quick Start
+
+1. **Prepare Firebase**
+   - Create Firebase project
+   - Enable Authentication, Firestore, and Storage
+   - Get web config and service account key
+
+2. **Deploy Backend to Render**
+   ```bash
+   # Root Directory: backend
+   # Build Command: npm install
+   # Start Command: npm start
+   ```
+   Set environment variables (see DEPLOYMENT.md)
+
+3. **Deploy Frontend to Vercel**
+   ```bash
+   # Root Directory: frontend
+   # Framework: Vite
+   # Build Command: npm run build
+   # Output Directory: dist
+   ```
+   Set environment variables (see DEPLOYMENT.md)
+
+4. **Post-Deployment**
+   - Update CORS settings with production URLs
+   - Add Vercel domain to Firebase authorized domains
+   - Test all features
+
+### Environment Variables
+
+**Frontend (.env):**
 ```bash
-cd frontend
-npm run build
-# Deploy dist folder
+VITE_FIREBASE_API_KEY=your_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+VITE_FIREBASE_APP_ID=your_app_id
+VITE_API_URL=https://your-backend.onrender.com
 ```
 
-### Backend (Railway/Render)
+**Backend (.env):**
 ```bash
-cd backend
-# Set environment variables
-# Deploy with Node.js runtime
+PORT=5000
+NODE_ENV=production
+FIREBASE_PROJECT_ID=your-project-id
+FIREBASE_CLIENT_EMAIL=your-email@project.iam.gserviceaccount.com
+FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n"
+FRONTEND_URL=http://localhost:5173
+PRODUCTION_FRONTEND_URL=https://your-app.vercel.app
 ```
+
+For detailed instructions, see **[DEPLOYMENT.md](./DEPLOYMENT.md)**
+
 
 ## 🤝 Contributing
 
